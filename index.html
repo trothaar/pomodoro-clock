@@ -1,0 +1,99 @@
+<!--
+ Teresa Rothaar
+ Free Code Camp Challenge #294
+ Build a Pomodoro Clock
+
+ Clock should be funtionally similar to
+ https://codepen.io/FreeCodeCamp/full/aNyxXR/
+
+ Much thanks to Dylan Israel at Coding360 for his great tutorial!
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Free Code Camp Pomodoro Clock</title>
+  <meta charset="utf-8">
+
+<!-- CSS -->
+<link rel="stylesheet" type="text/css" href="pomodoro.css">
+
+<!-- Bootstrap -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+<!-- Font Awesome -->
+<script src="https://use.fontawesome.com/16f8eaceda.js"></script>
+
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+
+<!-- JQuery -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.3/themes/smoothness/jquery-ui.css" />
+<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.3/jquery-ui.min.js"></script>
+
+</head>
+<body>
+
+  <div class = "container"><div class = "text-center"><div class = "container" id="timerContainer">
+<h1>Pomodoro Clock</h1>
+<h2>Free Code Camp Challenge #294</h2>
+
+<!-- Main Timer -->
+<div id = "timeDiv">
+<h1 id="title1">Session Time</h1>
+
+<!--Subtract 5 minutes -->
+<a href="#" class ="btn btn-primary" id="minus5Clock">-</a>
+<h2 id="minus5Digit">5</h2>
+
+<!--Add 5 minutes -->
+<a href="#" class ="btn btn-primary" id="add5Clock">+</a>
+<h2 id="add5Digit">5</h2>
+
+<!--Reset Timer -->
+<a href="#" class ="btn btn-primary" id="reset">Reset</a>
+</div>
+
+<!-- Break Timer -->
+<div id="breakDiv">
+  <h1 id="title2">Break Time</h1>
+
+  <!--Subtract 5 minutes -->
+  <a href="#" class ="btn btn-primary" id="minus5Break">-</a>
+  <h2 id="minus5BreakDigit">5</h2>
+
+  <!--Add 5 minutes -->
+  <a href="#" class ="btn btn-primary" id="add5Break">+</a>
+  <h2 id="minus5BreakDigit">5</h2>
+
+</div>
+
+<!-- Start the timer -->
+<a href="#" class ="btn btn-primary" id="start">Start</a>
+
+</div></div></div>
+
+<!-- TODO  -->
+
+<!-- Javascript -->
+<script src="pomodoro.js"></script>
+
+ <div class="container-fluid text-center" id="footer">
+  <p>By Teresa Rothaar</p>
+    <a href="mailto:trothaarwork@gmail.com">
+      <i class="fa fa-envelope fa-fw"></i>
+    </a>
+    <a href="https://github.com/trothaar" target='_blank'>
+      <i class="fa fa-github fa-fw"></i>
+    </a>
+    <a href="https://www.linkedin.com/in/teresarothaar" target='_blank'>
+      <i class="fa fa-linkedin"></i>
+    </a>
+    <a href="http://www.freecodecamp.com/trothaar" target='_blank'>
+  (<i class="fa fa-fire fa-fw"></i>)
+</a>
+</div>
+</body>
+</html>
