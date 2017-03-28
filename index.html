@@ -36,6 +36,8 @@
 </head>
 <body>
 
+<!-- Time's Up Buzzer from Soundbible.com-->
+<audio id="buzzer" src="http://wildowldigital.com/wp-content/uploads/2017/03/basketball-buzzer.mp3" type="audio/mpeg"></audio>
   <div class = "container"><div class = "text-center"><div class = "container" id="timerContainer">
 <h1>Pomodoro Clock</h1>
 <h2>Free Code Camp Challenge #294</h2>
@@ -44,13 +46,12 @@
 <div id = "timeDiv">
 <h1 id="title1">Session Time</h1>
 
-<!--Subtract 5 minutes -->
+<!--Subtract minutes -->
 <a href="#" class ="btn btn-primary" id="minus5Clock">-</a>
-<h2 id="minus5Digit">5</h2>
+<h2 id="sessionDigit">25</h2>
 
-<!--Add 5 minutes -->
+<!--Add minutes -->
 <a href="#" class ="btn btn-primary" id="add5Clock">+</a>
-<h2 id="add5Digit">5</h2>
 
 <!--Reset Timer -->
 <a href="#" class ="btn btn-primary" id="reset">Reset</a>
@@ -60,13 +61,12 @@
 <div id="breakDiv">
   <h1 id="title2">Break Time</h1>
 
-  <!--Subtract 5 minutes -->
+  <!--Subtract minutes -->
   <a href="#" class ="btn btn-primary" id="minus5Break">-</a>
-  <h2 id="minus5BreakDigit">5</h2>
+  <h2 id="breakDigit">5</h2>
 
-  <!--Add 5 minutes -->
+  <!--Add minutes -->
   <a href="#" class ="btn btn-primary" id="add5Break">+</a>
-  <h2 id="minus5BreakDigit">5</h2>
 
 </div>
 
