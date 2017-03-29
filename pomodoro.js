@@ -9,6 +9,7 @@ $(document).ready(function() {
 $("#start").click(function(){
   // Use setInterval to call function timer
   var counter = setInterval(timer, 1000); // 1 millisecond = 1 second
+  count *= 60; // Convert session timer increments into minutes
 
   //Operate session timer
   function timer(){
@@ -20,9 +21,16 @@ $("#start").click(function(){
       buzzer.play(); // Play the basketball buzzer
       clearInterval(counter); // Stop the countdown
       var startBreak = setInterval(breakTimer, 1000); // 1 millisecond = 1 second
+      breakTime *= 60; // Convert break timer increments into minutes
       $("#sessionDigit").hide(); // Hide the zero now that the counter is done
     }
-    $("#sessionDigit").html(count);
+    // Convert session timer from seconds to minutes & seconds
+    if(count%60>=10){
+      $("#sessionDigit").html(Math.floor(count/60) + ":" + count%60);
+    }else{ // Case where seconds <10 - need to add leading zero
+      $("#sessionDigit").html(Math.floor(count/60) + ":" + "0" + count%60);
+    }
+
     //Operate break timer
     function breakTimer(){
       $("#timeType").html("Break Time: "); // Add a new header
@@ -35,7 +43,12 @@ $("#start").click(function(){
         $("#reset").show(); // Display the reset button
         $("#breakDigit, #timeType").hide(); // Hide the zero
       }
-      $("#breakDigit").html(breakTime);
+      // Convert session timer from seconds to minutes & seconds
+      if(breakTime%60>=10){
+        $("#breakDigit").html(Math.floor(breakTime/60) + ":" + breakTime%60);
+      }else{ // Case where seconds <10 - need to add leading zero
+        $("#breakDigit").html(Math.floor(breakTime/60) + ":" + "0" + breakTime%60);
+      }
     }
   }
 });
@@ -49,9 +62,6 @@ $("#reset").click(function(){
   $("#start, #minus5Clock, #add5Clock, #minus5Break, #add5Break, #sessionDigit, #breakDigit, #title1, #title2").show();
   $("#reset, #timeType").hide();
 });
-
-
-
 
 // Subtract time from the session clock
 $("#minus5Clock").click(function(){
